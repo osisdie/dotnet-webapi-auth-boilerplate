@@ -99,7 +99,7 @@ namespace Hello6.Domain.Endpoint
             // CoreFX DI
             // services.AddRedisCache(Configuration.GetValue<string>(CacheConst.DefaultConnectionKey));
             services.AddRedisCache(Configuration);
-            services.AddMediatR(typeof(Program));
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<Program>());
             services.AddSingleton<ISessionAdmin, SessionAdmin>();
             services.AddEmailService(options =>
             {
@@ -154,8 +154,9 @@ namespace Hello6.Domain.Endpoint
                 });
                 c.EnableAnnotations();
 
-                c.SwaggerDoc("v202104", new OpenApiInfo { Title = "Hello6 v202104", Version = "202104" });
-                c.SwaggerDoc("v202103", new OpenApiInfo { Title = "Hello6 v202103", Version = "202103" });
+                c.SwaggerDoc("v202603", new OpenApiInfo { Title = "Auth v202603", Version = "202603" });
+                c.SwaggerDoc("v202104", new OpenApiInfo { Title = "Auth v202104", Version = "202104" });
+                c.SwaggerDoc("v202103", new OpenApiInfo { Title = "Auth v202103", Version = "202103" });
 
                 c.DocumentFilter<RemoveDefaultApiVersionRouteDocumentFilter>();
 
@@ -191,8 +192,12 @@ namespace Hello6.Domain.Endpoint
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v202104/swagger.json", "Hello6 v202104"));
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v202103/swagger.json", "Hello6 v202103"));
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v202603/swagger.json", "Auth v202603");
+                    c.SwaggerEndpoint("/swagger/v202104/swagger.json", "Auth v202104");
+                    c.SwaggerEndpoint("/swagger/v202103/swagger.json", "Auth v202103");
+                });
             }
 
             app.UseRouting();

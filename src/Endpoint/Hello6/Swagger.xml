@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hello6.Domain.Endpoint</name>
+    </assembly>
+    <members>
+        <member name="M:Hello6.Domain.Endpoint.Controllers.AuthActions.AuthController.Login_latest(CoreFX.Auth.Contracts.Login.AuthLogin_RequestDto)">
+            <summary>
+            Login
+            </summary>
+            <param name="requestDto">Username and password</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hello6.Domain.Endpoint.Controllers.AuthActions.AuthController.Login_v202104(CoreFX.Auth.Contracts.Login.AuthLogin_RequestDto)">
+            <summary>
+            Login
+            </summary>
+            <param name="requestDto">Username and password</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hello6.Domain.Endpoint.Controllers.AuthActions.AuthController.Login_v202103(CoreFX.Auth.Contracts.Login.AuthLogin_RequestDto)">
+            <summary>
+            Login
+            </summary>
+            <param name="requestDto">Username and password</param>
+            <returns></returns>
+        </member>
+        <member name="M:Hello6.Domain.Endpoint.Controllers.AuthActions.AuthController.RefreshToken_latest(CoreFX.Auth.Contracts.RefreshToken.RefreshToken_RequestDto)">
+            <summary>
+            Refresh token key
+            </summary>
+            <param name="requestDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hello6.Domain.Endpoint.Controllers.AuthActions.AuthController.RefreshToken_v202104(CoreFX.Auth.Contracts.RefreshToken.RefreshToken_RequestDto)">
+            <summary>
+            Refresh token key
+            </summary>
+            <param name="requestDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hello6.Domain.Endpoint.Controllers.AuthActions.AuthController.RefreshToken_v202103(CoreFX.Auth.Contracts.RefreshToken.RefreshToken_RequestDto)">
+            <summary>
+            Refresh token key
+            </summary>
+            <param name="requestDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hello6.Domain.Endpoint.Controllers.HelloController.SendCommand_latest(Hello6.Domain.Contract.Models.Echo.HelloSendCommand_RequestDto)">
+            <summary>
+            Send command
+            </summary>
+            <param name="requestDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hello6.Domain.Endpoint.Controllers.HelloController.SendCommand_v202104(Hello6.Domain.Contract.Models.Echo.HelloSendCommand_RequestDto)">
+            <summary>
+            Send command
+            </summary>
+            <param name="requestDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hello6.Domain.Endpoint.Controllers.HelloController.SendCommand_v202103(Hello6.Domain.Contract.Models.Echo.HelloSendCommand_RequestDto)">
+            <summary>
+            Send command
+            </summary>
+            <param name="requestDto"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
