@@ -33,6 +33,6 @@ jobs:
         run: dotnet build auth-api-all-projects.sln --no-restore -c Release
 
       - name: Test
-        run: dotnet test auth-api-all-projects.sln --no-build -c Release --verbosity normal --filter "FullyQualifiedName!~Caching.Redis&FullyQualifiedName!~IntegrationTest"
+        run: dotnet test auth-api-all-projects.sln --no-build -c Release --verbosity normal --filter "FullyQualifiedName!~Cache_Test&FullyQualifiedName!~IntegrationTest"
         env:
           ASPNETCORE_ENVIRONMENT: Development
