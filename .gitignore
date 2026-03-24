@@ -347,3 +347,7 @@ healthchecksdb
 **/log/
 **/aws-logger-errors.txt
 [Nn]u[Gg]et.[Cc]onfig
+firebase-debug.log
+
+# Claude Code local settings (per-machine permissions/config)
+settings.local.json
