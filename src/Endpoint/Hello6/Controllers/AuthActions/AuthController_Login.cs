@@ -11,6 +11,7 @@ using CoreFX.Notification.Smtp.Models;
 using Hello6.Domain.Endpoint.Controllers.Bases;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Asp.Versioning;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Hello6.Domain.Endpoint.Controllers.AuthActions
@@ -34,6 +35,7 @@ namespace Hello6.Domain.Endpoint.Controllers.AuthActions
         /// </summary>
         /// <param name="requestDto">Username and password</param>
         /// <returns></returns>
+        [ApiVersion("202603")]
         [ApiVersion("202104")]
         [ApiExplorerSettings(GroupName = "v202104")]
         [Route("api/v202104/auth/login")]

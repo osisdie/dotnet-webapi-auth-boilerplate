@@ -11,7 +11,7 @@
 #================================================================
 # export VERSION=$(cat src/Endpoint/Hello6/.version | head -n1)
 #   Your docker image's version, ex:
-#   - default: the content in the file of ./src/Endpoint/Hello6/.version
+#   - default: the content in the file of src/Endpoint/Hello6/.version
 #   - or any specific such as 1.0.0.1
 
 # export IMAGE_HOST=docker.io/[ACCOUNT-ID]
@@ -27,7 +27,7 @@
 if [ -z ${IMAGE_HOST+x} ]; then echo "IMAGE_HOST is unset" && exit 1; else echo "IMAGE_HOST is set to '$IMAGE_HOST'"; fi
 if [ -z ${VERSION+x} ]; then echo "VERSION is unset" && exit 1; else echo "VERSION is set to '$VERSION'"; fi
 
-REPO_NAME=hello6-api
+REPO_NAME=auth-api
 VERSION=${VERSION:-1.0.0.0}
 IMAGE_HOST_WITH_TAG=${IMAGE_HOST}/${REPO_NAME}:${VERSION}
 

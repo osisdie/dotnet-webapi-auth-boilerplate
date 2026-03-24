@@ -5,6 +5,7 @@ using CoreFX.Abstractions.Contracts.Extensions;
 using Hello6.Domain.Contract.Models.Echo;
 using Hello6.Domain.Endpoint.Controllers.Bases;
 using Microsoft.AspNetCore.Mvc;
+using Asp.Versioning;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace Hello6.Domain.Endpoint.Controllers
@@ -28,6 +29,7 @@ namespace Hello6.Domain.Endpoint.Controllers
         /// </summary>
         /// <param name="requestDto"></param>
         /// <returns></returns>
+        [ApiVersion("202603")]
         [ApiVersion("202104")]
         [ApiExplorerSettings(GroupName = "v202104")]
         [Route("api/v202104/hello/sendcommand")]
